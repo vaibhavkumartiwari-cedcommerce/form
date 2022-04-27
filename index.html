@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main{
+                height: 80vh;
+                width : 60%;
+                margin: auto;
+                background-color: bisque;
+                padding-top: 10%;
+
+                    
+            }
+            form{
+                height: 70%;
+                width: 60%;
+                margin: auto;
+                background-color: white;
+                
+            }
+            .lbl{
+                height: 30%;
+                width: 25%;
+                
+                float: left;
+                margin-left: 5%;
+                text-align: center;
+                padding-top: 5%;
+                
+            }
+            .inp{
+                height: 30%;
+                width: 60%;
+                
+                float: left;
+                margin-left: 3%;
+                text-align: center;
+                padding-top: 5%;
+            }
+            button{
+                margin-right: 56%;
+            }
+            .hidden{
+                height: 25%;
+                width: 70%;
+                margin: auto;
+                float: right;
+                padding-left: 20%;
+                
+            }
+            #res{
+                color: red;;
+            }
+            #resg{
+                color: green;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="main">
+            <form action="#" method="">
+                <div class="lbl">
+                    <label for="Age">Age</label>
+                    <br>
+                    <br>
+                    <label for="Weight">Weight</label>
+
+                </div>
+                <div class="inp">
+                    <input type="text" id="Age" placeholder="Enter Age">
+                    <br>
+                    <br>
+                    <input type="text" id="Weight" placeholder="Enter Weight">
+                    <br>
+                    <br>
+                    <button type="submit" onclick="check()"><b>Submit</b></button>
+                </div>
+                <br>
+                <br>
+                
+                <div class="hidden">
+                    <h3 id="res"></h3>
+                    <h3 id="resg"></h3>
+                </div>
+
+            </form>
+
+        </div>
+
+        <script>
+            function check(){
+                var Age=document.getElementById("Age").value;
+                var Weight=document.getElementById("Weight").value;
+
+                //alert("age is "+ Age + "weight is "+Weight);
+                if(Age>=5&&Age<8){
+                    if(Weight>=15&&Weight<21)
+                      { document.getElementById("resg").innerHTML="Keep it Up!";
+                      document.getElementById("res").innerHTML="";
+
+                }
+                    if(Weight<15)
+                    document.getElementById("res").innerHTML="You are underweight";
+                    if(Weight>20)
+                    document.getElementById("res").innerHTML="You are Overweight";
+                }
+                if(Age>=8&&Age<11){
+                    if(Weight>=21&&Weight<26)
+                    { document.getElementById("resg").innerHTML="Keep it Up!";
+                      document.getElementById("res").innerHTML="";
+
+                }
+                    if(Weight<21)
+                    document.getElementById("res").innerHTML="You are underweight";
+                    if(Weight>25)
+                    document.getElementById("res").innerHTML="You are Overweight";
+                    
+                }
+                if(Age>=11&&Age<16){
+                    if(Weight>=26&&Weight<31)
+                    { document.getElementById("resg").innerHTML="Keep it Up!";
+                      document.getElementById("res").innerHTML="";
+
+                }
+                    if(Weight<26)
+                    document.getElementById("res").innerHTML="You are underweight";
+                    if(Weight>30)
+                    document.getElementById("res").innerHTML="You are Overweight";
+                    
+                }
+                if(Age>=16&&Age<21){
+                    if(Weight>=31&&Weight<41)
+                    { document.getElementById("resg").innerHTML="Keep it Up!";
+                      document.getElementById("res").innerHTML="";
+
+                }
+                    if(Weight<31)
+                    document.getElementById("res").innerHTML="You are underweight";
+                    if(Weight>40)
+                    document.getElementById("res").innerHTML="You are Overweight";
+                    
+                }
+
+                if(Age<5 || Age >20)
+                    document.getElementById("res").innerHTML="Please enter Age between 5 and 20";
+               
+
+            }
+        </script>
+    </body>
+</html>
